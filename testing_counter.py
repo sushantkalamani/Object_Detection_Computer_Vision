@@ -14,8 +14,7 @@ classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "trai
 
 mask = cv2.imread('mask.png')
 
-while True:
-    success, img = cap.read()
+while True:    success, img = cap.read()
     imgRegin = cv2.bitwise_and(img, mask)
     # img = cv2.flip(img, 1)
     results = model(imgRegin, stream=True)
